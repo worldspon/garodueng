@@ -1,4 +1,4 @@
-html {scroll-behavior: smooth;  overflow-x: hidden;}
+html {scroll-behavior: smooth; overflow-x: hidden; }
 body {font-family: 'Nanum Gothic', sans-serif;}
 .block_word {display: inline-block; line-height: 1.5;}
 a {text-decoration: none;}
@@ -7,7 +7,7 @@ a:hover {color:none;}
 
 /*HEADER START*/
 
-header {width:100%; display: grid; grid-template-rows: 1; grid-template-columns: 1fr 1200px 1fr; position: fixed;}
+header {width:100%; display: grid; grid-template-rows: 1; grid-template-columns: 1fr 1200px 1fr; position: fixed; z-index: 99;}
 .header_inner {grid-row: 1; grid-column: 2; display: flex; border-radius: 15px; padding:10px 20px; align-items: center;}
 .header_inner img {width:200px;}
 .nav_box {display: flex;  margin-left: auto; }
@@ -15,9 +15,7 @@ header {width:100%; display: grid; grid-template-rows: 1; grid-template-columns:
 .navigation li a{display:inline-block; color:white; font-size:1rem; font-weight: 800;}
 .navigation li:not(:last-child) a {padding-right: 30px;}
 .side_btn1 {display:none;}
-
-
-
+.header_bg {background-color:#532480; opacity: 0.8; position: fixed; top:0; z-index: 98; width:100%; height:80px; display:none;}
 
 
 .side_menu {height: calc(100vh); position: fixed; width: 120px; display: flex; flex-direction: column; top:0; right:0; z-index: 889; background-color:#532480; padding:20px; text-align: right; margin-right: -160px;}
@@ -172,13 +170,10 @@ footer {grid-column: 1 / span 3; grid-row: 7; display:grid; grid-template-column
 
 
 @media screen and (max-width: 1200px) {
-    /*HEADER START*/
 
     header {grid-template-columns: 100%;}
     .header_inner {grid-row: 1; grid-column: 1;}
 
-
-    /*HEADER START*/
 
     .wrap { grid-template-columns:100%;}
 
@@ -314,6 +309,7 @@ footer {grid-column: 1 / span 3; grid-row: 7; display:grid; grid-template-column
     
     .faqs_card {padding:20px 20px; box-shadow: 3px 3px 3px #a8a7a7;}
     .faqs_content_hl h3 {font-size: 0.7rem;}
+    .faqs_content {font-size:0.6rem;}
 
 
 
