@@ -1,41 +1,52 @@
-var nav_font = document.getElementsByClassName('nav_font');
-var nav_img = document.getElementById('nav_img');
 var header = document.querySelector('header');
-var faq_arrow = document.querySelectorAll('.faqs_content_hl a');
-var faq_content = document.querySelectorAll('.faqs_content');
 var banner = document.getElementById('banner');
 var banner_height=0;
 
-Array.from(faq_arrow).forEach((val,index,e) => {
-    e[index].addEventListener('click',function(){
-        con_visible(index);
-    });
+var side_menu = document.querySelector('.side_menu');
+var side_btn1 = document.querySelector('.side_btn1');
+var side_btn2 = document.querySelector('.side_btn2');
+
+side_btn1.addEventListener('click',function(){
+    side_menu.style.marginRight = 0;
 });
 
-function con_visible(super_index) {
-    Array.from(faq_content).forEach((val,index,e) => {
-        if(super_index!=index){
-            e[index].style.display = "none";
-        }
-    });
-    if(faq_content[super_index].style.display=="none"){
-        faq_content[super_index].style.display="block";
-    }else if((faq_content[super_index].style.display=="block")) {
-        faq_content[super_index].style.display="none";
-    }
-    console.log(faq_content[super_index].style.display);
-}
+side_btn2.addEventListener('click',function(){
+    side_menu.style.marginRight = -160+'px';
+});
 
+
+
+
+
+// scroll 이동시 nav background-color 변경
 window.addEventListener('scroll', function(){
-    banner_height = banner.clientHeight;
+    banner_height = banner.clientHeight; // banner 높이값 get
     change_nav(banner_height);
 });
 
-window.addEventListener('resize',function(){
-    //
-})
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 
+ * @brief 현재 배너 높이를 받아 그 이상 scroll down 되면 background-color 변경
+ * @author JJH
+ * @param height 현재 화면에서 배너 높이
+ * @see . 반응형 적용시 banner height가 변경되어 높이값에 대응하기 위해 작성함
+ * 
+ */
 function change_nav(height) {
     if(window.scrollY<height){
         header.style.background = 'none';

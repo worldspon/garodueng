@@ -1,10 +1,8 @@
-html {scroll-behavior: smooth;}
-
+html {scroll-behavior: smooth; overflow-x: hidden;}
 body {font-family: 'Nanum Gothic', sans-serif;}
 .block_word {display: inline-block; line-height: 1.5;}
-
-
 a {text-decoration: none;}
+a:hover {color:none;}
 
 
 /*HEADER START*/
@@ -16,13 +14,16 @@ header {width:100%; display: grid; grid-template-rows: 1; grid-template-columns:
 .navigation {display: flex; flex-direction: row; align-items: center;}
 .navigation li a{display:inline-block; color:white; font-size:1rem; font-weight: 800;}
 .navigation li:not(:last-child) a {padding-right: 30px;}
-.side_btn {display:none;}
+.side_btn1 {display:none;}
 
 
 
 
 
-.side_menu {height: calc(100vh); position: absolute; display: flex; flex-direction: column; right:0; z-index: 999; display:none;}
+.side_menu {height: calc(100vh); position: fixed; width: 120px; display: flex; flex-direction: column; top:0; right:0; z-index: 889; background-color:#532480; padding:20px; text-align: right; margin-right: -160px;}
+.side_menu ul {font-size: 1.2rem; line-height: 1.5; font-weight: 800;}
+.side_menu ul li a {color: white;}
+.side_btn2 {width:40px; margin-bottom: 20px;}
 
 /*HEADER START*/
 
@@ -247,7 +248,7 @@ footer {grid-column: 1 / span 3; grid-row: 7; display:grid; grid-template-column
 
 @media screen and (max-width: 830px) {
     .navigation{display: none;}
-    .side_btn {display: inline-block; max-width: 30px; }
+    .side_btn1 {display: inline-block; max-width: 40px; }
 
 
     .app {grid-template-columns: 100%;}
