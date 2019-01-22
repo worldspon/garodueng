@@ -18,7 +18,8 @@ const next_box = document.querySelector('.next_box');
 var cur_box_flag = 3; // preview box에 표시될 img 갯수
 
 
-const faq_btn = document.querySelectorAll(".faq_btn");
+const faq_btn = document.querySelectorAll(".faqs_card");
+const faq_img = document.querySelectorAll('.faq_btn_img');
 const faqs_content = document.querySelectorAll('.faqs_content');
 var fqas_index = 0;
 
@@ -88,7 +89,7 @@ arrow_l.addEventListener('click',function(){
 
 
 
-// faq btn click시 해당 index와 같은 faq content 활성화
+// faq btn click시 해당 index와 같은 faq content 활성화, img 변경
 faq_btn.forEach(e => {
     e.addEventListener('click',function(){
         faqs_index = Array.from(faq_btn).indexOf(this);
@@ -102,8 +103,10 @@ faq_btn.forEach(e => {
         // 이미 활성화 상태이면 비활성화
         if(faqs_content[faqs_index].style.display=='none'){
             faqs_content[faqs_index].style.display='block';
+            faq_img[faqs_index].setAttribute('src','image/up_arrow.png');
         } else if(faqs_content[faqs_index].style.display=='block'){
             faqs_content[faqs_index].style.display='none';
+            faq_img[faqs_index].setAttribute('src','image/down_arrow.png');
         }
     });
 });
