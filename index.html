@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+            alert("이 페이지는 Chrome에 최적화되어 있습니다.\nIE로 접속 시 주요 기능이 동작하지 않을 수 있습니다.");
+        }
+    </script>
 
 </head>
 <body>
@@ -120,7 +126,7 @@
                     <h4>기술력</h4>
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</span>
                 </div>
-                <div class="wide_crad feature_card">
+                <div class="wide_card feature_card">
                     <img src="image/icon/wide.png" alt="">
                     <h4>확장성</h4>
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</span>
