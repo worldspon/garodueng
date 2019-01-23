@@ -97,6 +97,7 @@ faq_btn.forEach(e => {
         faqs_content.forEach((val, index, l) => {
             if(faqs_index!=index){
                 l[index].style.display="none";
+                faq_img[index].setAttribute('src','image/down_arrow.png');
             }
         });
 
