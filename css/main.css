@@ -374,9 +374,9 @@ header {
     font-weight: bold;
 }
 .feature_card span {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: initial;
-    line-height: 1.5;
+    line-height: 1.7;
     color:#666;
 }
 
@@ -851,7 +851,7 @@ footer {
 
     
     .faqs_card {padding:20px 20px; box-shadow: 3px 3px 3px #a8a7a7;}
-    .faqs_content_hl h3 {font-size: 0.7rem;}
+    .faqs_content_hl h3 {font-size: 1rem;}
     .faqs_content {font-size:0.6rem;}
 
 
